@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>For My Maharani ❤️</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Decorative background containers (empty — you can add particles via CSS/JS later) -->
+  <div id="stars" aria-hidden="true"></div>
+  <div id="petals" aria-hidden="true"></div>
+  <div id="butterflies" aria-hidden="true"></div>
+
+  <main class="container" role="main" aria-labelledby="main-heading">
+    <!-- Page 1 -->
+    <section id="page1" class="page active" aria-labelledby="main-heading">
+      <h1 id="main-heading">Will you be my Maharani?</h1>
+      <h2>Sneha-Date</h2>
+      <p>I made this little surprise just for you. Click next to continue.</p>
+
+      <div id="scene" aria-hidden="true">
+        <div id="boy">🤵</div>
+        <div id="bouquet">💐</div>
+        <div id="girl">👸</div>
+      </div>
+
+      <div class="choice">
+        <button onclick="nextPage(2)">Next</button>
+      </div>
+    </section>
+
+    <!-- Page 2 -->
+    <section id="page2" class="page" aria-labelledby="p2">
+      <h2 id="p2">A little story</h2>
+      <p>From the moment I met you, my days have been brighter. Keep going to see something sweet.</p>
+      <div class="choice">
+        <button onclick="nextPage(1)">Back</button>
+        <button onclick="nextPage(3)">Next</button>
+      </div>
+    </section>
+
+    <!-- Page 3 -->
+    <section id="page3" class="page" aria-labelledby="p3">
+      <h2 id="p3">Remember</h2>
+      <p>All the little moments — the laughs, the coffee, the walks — mean everything to me.</p>
+      <div class="choice">
+        <button onclick="nextPage(2)">Back</button>
+        <button onclick="nextPage(4)">Next</button>
+      </div>
+    </section>
+
+    <!-- Page 4 -->
+    <section id="page4" class="page" aria-labelledby="p4">
+      <h2 id="p4">Promise</h2>
+      <p>I promise to be there for you, to listen, to support and to love you with all I have.</p>
+      <div class="choice">
+        <button onclick="nextPage(3)">Back</button>
+        <button onclick="nextPage(5)">Next</button>
+      </div>
+    </section>
+
+    <!-- Page 5 -->
+    <section id="page5" class="page" aria-labelledby="p5">
+      <h2 id="p5">Will you…?</h2>
+      <p>There is only one question left. Please choose carefully ❤️</p>
+      <div class="choice">
+        <button onclick="nextPage(4)">Back</button>
+        <button onclick="nextPage(6)">Continue</button>
+      </div>
+    </section>
+
+    <!-- Page 6 — yes / no -->
+    <section id="page6" class="page" aria-labelledby="p6">
+      <h2 id="p6">Be my Maharani?</h2>
+      <p>Say the magic word…</p>
+      <div class="choice">
+        <button id="yes">Yes</button>
+        <button id="no" aria-label="No button">No</button>
+      </div>
+      <div style="margin-top:20px;">
+        <button onclick="nextPage(5)">Back</button>
+      </div>
+    </section>
+
+    <!-- Page 7 — final -->
+    <section id="page7" class="page" aria-labelledby="p7">
+      <h2 id="p7">Yay! ❤️</h2>
+      <p>Thank you, Maharani. I love you so much.</p>
+      <div class="choice">
+        <button onclick="nextPage(1)">Restart</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Optional: include an audio element if you add music in /music/ -->
+  <!-- <audio src="music/song.mp3" autoplay loop controls></audio> -->
+
+  <script src="script.js"></script>
+</body>
+</html>
