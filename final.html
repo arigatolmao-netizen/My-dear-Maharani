@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Yay — Maharani! ❤️</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container" role="main">
+    <section>
+      <h1>Yay! ❤️</h1>
+      <p>Thank you, Maharani. I love you so much.</p>
+      <div class="choice">
+        <a href="index.html"><button>Back</button></a>
+        <a href="index.html"><button>Restart</button></a>
+      </div>
+    </section>
+  </main>
+  <script>
+    // Small confetti burst on load for the final page
+    (function(){
+      function burst(){
+        const w = window.innerWidth; const h = window.innerHeight;
+        for(let i=0;i<80;i++){
+          const el = document.createElement('div');
+          el.textContent = '✨';
+          el.style.position = 'fixed';
+          el.style.left = (Math.random()*w)+'px';
+          el.style.top = (Math.random()*h)+'px';
+          el.style.fontSize = (8+Math.random()*18)+'px';
+          el.style.opacity = '0.9';
+          el.style.pointerEvents = 'none';
+          el.style.transform = 'translateY(0)';
+          el.style.transition = 'transform 1200ms ease-out, opacity 1200ms linear';
+          document.body.appendChild(el);
+          requestAnimationFrame(()=>{
+            el.style.transform = 'translateY(-200px) rotate('+(Math.random()*720)+'deg)';
+            el.style.opacity = '0';
+          });
+          setTimeout(()=>el.remove(),1400+Math.random()*600);
+        }
+      }
+      window.addEventListener('load',()=>setTimeout(burst,150));
+    })();
+  </script>
+</body>
+</html>
